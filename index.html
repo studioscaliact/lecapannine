@@ -18,7 +18,7 @@
         body {
             background-color: #f8fafc;
             color: #1e293b;
-            padding-top: 50px; /* Spazio necessario per non far coprire il menu dalla barra fissa */
+            padding-top: 50px; /* Spazio per non far coprire il menu dalla barra fissa */
             padding-bottom: 60px;
         }
 
@@ -57,22 +57,19 @@
             object-fit: contain;
         }
 
-        /* --- HEADER CON IMMAGINE DI SFONDO (SENZA TESTO) --- */
+        /* --- HEADER CON IMMAGINE DI SFONDO COMPLETA (SENZA TESTO) --- */
         .hero {
-            /* Gestione corretta degli spazi nel nome del file per il CSS */
-            background: url('sfondo%20capannine.png') center center / cover no-repeat;
-            height: 220px; /* Altezza dell'immagine dell'head */
+            /* 'contain' assicura che l'intera immagine sia visibile senza ritagli */
+            background: url('sfondo%20capannine.png') center center / contain no-repeat;
+            /* L'altezza si regola proporzionalmente alla larghezza dello schermo */
+            height: auto; 
+            aspect-ratio: 16 / 9; /* Mantieni le proporzioni originali dell'immagine */
             width: 100%;
             position: relative;
+            background-color: #f8fafc; /* Colore di sfondo se l'immagine non copre tutto */
         }
 
-        /* Velatura scura leggerissima per dare profondità */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.05); 
-        }
+        /* Velatura scura opzionale rimossa per chiarezza dell'immagine completa */
 
         /* --- CATEGORIE E PRODOTTI --- */
         .menu-container {
