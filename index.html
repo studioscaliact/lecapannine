@@ -2,10 +2,201 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Test Chiosco Danila</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiosco Danila - Catania | Menu Digitale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* --- STILI GENERALI --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding-bottom: 60px;
+        }
+
+        /* --- HEADER & HERO (STILE CHIOSCO) --- */
+        .hero {
+            background: linear-gradient(135deg, #005088 0%, #002f52 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 5px solid #ff9f1c;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .info-bar {
+            background-color: #ffffff;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            color: #64748b;
+        }
+
+        .info-bar span i {
+            color: #ff9f1c;
+            margin-right: 5px;
+        }
+
+        /* --- CATEGORIE E PRODOTTI --- */
+        .menu-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .category-title {
+            font-size: 22px;
+            color: #005088;
+            margin: 30px 0 15px 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-left: 4px solid #ff9f1c;
+        }
+
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #005088;
+            white-space: nowrap;
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .lang-en {
+            font-size: 13px;
+            color: #94a3b8;
+            font-style: italic;
+            border-top: 1px dashed #f1f5f9;
+            padding-top: 4px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+            color: #94a3b8;
+            background-color: #0f172a;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Il sito del Chiosco Danila è online!</h1>
-    <p>Se vedi questa scritta, Netlify funziona alla perfezione.</p>
-</body>
-</html>
+
+    <div class="hero">
+        <h1>Chiosco Danila</h1>
+        <p>L'originale seltz e granite a Catania</p>
+    </div>
+
+    <div class="info-bar">
+        <span><i class="fa-solid fa-location-dot"></i> Catania</span>
+        <span><i class="fa-solid fa-clock"></i> Aperto fino a tarda notte</span>
+    </div>
+
+    <div class="menu-container">
+
+        <div class="category-title">
+            <i class="fa-solid fa-glass-water"></i> Seltz & Sciroppi
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <span class="product-name">Seltz Limone e Sale</span>
+                <span class="product-price">€ 1,50</span>
+            </div>
+            <p class="product-desc">Acqua frizzante seltz, succo di limone fresco spremuto al momento e un pizzico di sale marino. Il classico dissetante catanese.</p>
+            <p class="lang-en">Super sparkling water, fresh squeezed lemon juice, and a pinch of sea salt.</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <span class="product-name">Mandarino al Limone</span>
+                <span class="product-price">€ 2,00</span>
+            </div>
+            <p class="product-desc">Sciroppo artigianale di mandarino verde combinato con succo di limone fresco e seltz.</p>
+            <p class="lang-en">Green mandarin syrup with fresh lemon juice and sparkling water.</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <span class="product-name">Sciampagnino</span>
+                <span class="product-price">€ 2,00</span>
+            </div>
+            <p class="product-desc">Un mix della tradizione: seltz, una spruzzata di vino bianco locale e cedrata.</p>
+            <p class="lang-en">A traditional mix of sparkling water, a splash of white wine, and citron juice.</p>
+        </div>
+
+        <div class="category-title">
+            <i class="fa-solid fa-ice-cream"></i> Granite & Brioche
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <span class="product-name">Granita Artigianale</span>
+                <span class="product-price">€ 3,00</span>
+            </div>
+            <p class="product-desc">Gusti disponibili: Mandorla, Pistacchio, Limone, Caffè, Cioccolato, Gelsi.</p>
+            <p class="lang-en">Traditional Sicilian granita. Flavors: Almond, Pistachio, Lemon, Coffee, Chocolate.</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <span class="product-name">Brioche col Tuppo</span>
+                <span class="product-price">€ 1,20</span>
+            </div>
+            <p class="product-desc">La tipica e soffice brioche siciliana, ideale da accompagnare alla granita.</p>
+            <p class="lang-en">The traditional soft Sicilian pastry, perfect for dipping in your granita.</p>
+        </div>
+
+        <div class="category-
